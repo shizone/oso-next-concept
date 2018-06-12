@@ -16,7 +16,6 @@
   }
 }
 
-/* enter、 leave アニメーションで異なる間隔やタイミング関数を利用することができます */
 .slide-fade-enter-active {
   transition: all .3s linear;
 }
@@ -24,7 +23,6 @@
   transition: all .8s linear;
 }
 .slide-fade-enter, .slide-fade-leave-to
-/* .slide-fade-leave-active below version 2.1.8 */ {
   transform: translateX(10px);
   opacity: 0;
 }
