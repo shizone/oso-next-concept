@@ -7,219 +7,45 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/siimple@3.0.0/dist/siimple.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
   <div class="siimple-layout">
     <!-- navbar -->
-    <header class="siimple-navbar siimple-navbar--navy siimple-navbar--large">
+    <header class="siimple-navbar siimple-navbar--navy siimple-navbar--large" id="header">
       <div class="siimple-layout--left">
-        <a class="siimple-navbar-title">オープンセミナー2018@岡山</a>
+        <a class="siimple-navbar-title" href="./">オープンセミナー2018@岡山</a>
       </div>
       <div class="siimple-layout--right">
-        <a class="siimple-navbar-link" href="timetable.html">タイムテーブル</a>
-        <a class="siimple-navbar-link" href="faq.html">よくあるご質問</a>
-        <a class="siimple-navbar-link" href="sponsor.html">スポンサー</a>
-        <a class="siimple-navbar-link" href="staff.html">実行委員会</a>
-        <a class="siimple-navbar-link" href="past.html">過去の開催実績</a>
+        <a class="siimple-navbar-link" v-bind:href="menu.url" v-for="(menu, index) in menus">{{menu.text}}</a>
       </div>
     </header>
     <div class="siimple-content content">
       <!-- staff -->
       <div class="siimple-box page-title">
-        <div class="siimple-box-title">実行委員会</div>
+        <div class="siimple-box-title"><i class="fas fa-users"></i> 実行委員会</div>
       </div>
-      <div class="siimple-grid oso-staff">
+      <div class="siimple-grid oso-staff" id="staff">
         <div class="siimple-grid-row">
-          <div class="siimple-grid-col siimple-grid-col-sm--12 siimple-grid-col-md--6 siimple-grid-col-lg--4 siimple-grid-col--3">
+          <div class="siimple-grid-col siimple-grid-col-sm--12 siimple-grid-col-md--6 siimple-grid-col-lg--4 siimple-grid-col--3" v-for="(staff, index) in staffs">
             <div class="siimple-box siimple-box--navy oso-staff-box">
-              <div class="oso-staff-image"><img src="images/staff/printing.png"></div>
-              <div class="oso-staff-name">吉田 貴文</div>
-              <div class="oso-staff-roll">実行委員長</div>
+              <div class="oso-staff-image"><img v-bind:src="'images/staff/' + staff.image"></div>
+              <div class="oso-staff-name">{{staff.name}}</div>
+              <div class="oso-staff-roll">{{staff.roll}}</div>
               <div class="oso-staff-sns">
                 <div class="siimple-grid oso-staff-sns-icons">
                   <div class="siimple-grid-row">
-                    <div class="siimple-grid-col siimple-grid-col--3 oso-staff-sns-icon">
-                      <a href="https://twitter.com/zephiransas"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    <div class="siimple-grid-col siimple-grid-col--3 oso-staff-sns-icon" v-if="!!staff.twitter">
+                      <a v-bind:href="staff.twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
                     </div>
-                    <div class="siimple-grid-col siimple-grid-col--3 oso-staff-sns-icon">
-                      <a href="https://www.facebook.com/takafumi.yoshida.718"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    <div class="siimple-grid-col siimple-grid-col--3 oso-staff-sns-icon" v-if="!!staff.facebook">
+                      <a v-bind:href="staff.facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
                     </div>
-                    <div class="siimple-grid-col siimple-grid-col--3 oso-staff-sns-icon">
-                      <a href="https://zephiransas.github.io"><i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                    <div class="siimple-grid-col siimple-grid-col--3 oso-staff-sns-icon" v-if="!!staff.github">
+                      <a v-bind:href="staff.github"><i class="fab fa-github" aria-hidden="true"></i></a>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="siimple-grid-col siimple-grid-col-sm--12 siimple-grid-col-md--6 siimple-grid-col-lg--4 siimple-grid-col--3">
-            <div class="siimple-box siimple-box--navy oso-staff-box">
-              <div class="oso-staff-image"><img src="images/staff/printing.png"></div>
-              <div class="oso-staff-name">角田 裕樹</div>
-              <div class="oso-staff-roll">副実行委員長</div>
-              <div class="oso-staff-sns">
-                <div class="siimple-grid oso-staff-sns-icons">
-                  <div class="siimple-grid-row">
-                    <div class="siimple-grid-col siimple-grid-col--3 oso-staff-sns-icon">
-                      <a href="https://twitter.com/razon"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                    </div>
-                    <div class="siimple-grid-col siimple-grid-col--3 oso-staff-sns-icon">
-                      <a href="https://www.facebook.com/shiz0ne"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                    </div>
-                    <div class="siimple-grid-col siimple-grid-col--3 oso-staff-sns-icon">
-                      <a href="https://github.com/shizone"><i class="fab fa-github" aria-hidden="true"></i></a>
-                    </div>
-                    <div class="siimple-grid-col siimple-grid-col--3 oso-staff-sns-icon">
-                      <a href="https://about.me/shizone"><i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="siimple-grid-col siimple-grid-col-sm--12 siimple-grid-col-md--6 siimple-grid-col-lg--4 siimple-grid-col--3">
-            <div class="siimple-box siimple-box--navy oso-staff-box">
-              <div class="oso-staff-image"><img src="images/staff/printing.png"></div>
-              <div class="oso-staff-name">芝 世弐</div>
-              <div class="oso-staff-roll">事務局長</div>
-              <div class="oso-staff-sns">
-                <div class="siimple-grid oso-staff-sns-icons">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="siimple-grid-col siimple-grid-col-sm--12 siimple-grid-col-md--6 siimple-grid-col-lg--4 siimple-grid-col--3">
-            <div class="siimple-box siimple-box--navy oso-staff-box">
-              <div class="oso-staff-image"><img src="images/staff/printing.png"></div>
-              <div class="oso-staff-name">逸見 誠</div>
-              <div class="oso-staff-roll">会計</div>
-              <div class="oso-staff-sns">
-                <div class="siimple-grid oso-staff-sns-icons">
-                  <div class="siimple-grid-row">
-                    <div class="siimple-grid-col siimple-grid-col--3 oso-staff-sns-icon">
-                      <a href="https://twitter.com/mako_wis"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                    </div>
-                    <div class="siimple-grid-col siimple-grid-col--3 oso-staff-sns-icon">
-                      <a href="https://www.facebook.com/makoto.henmi"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                    </div>
-                    <div class="siimple-grid-col siimple-grid-col--3 oso-staff-sns-icon">
-                      <a href="https://github.com/makowis"><i class="fab fa-github" aria-hidden="true"></i></a>
-                    </div>
-                    <div class="siimple-grid-col siimple-grid-col--3 oso-staff-sns-icon">
-                      <a href="https://mako-wis.hatenablog.com/"><i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="siimple-grid-col siimple-grid-col-sm--12 siimple-grid-col-md--6 siimple-grid-col-lg--4 siimple-grid-col--3">
-            <div class="siimple-box siimple-box--navy oso-staff-box">
-              <div class="oso-staff-image"><img src="images/staff/printing.png"></div>
-              <div class="oso-staff-name">阿部 信介</div>
-              <div class="oso-staff-roll">会計</div>
-              <div class="oso-staff-sns">
-                <div class="siimple-grid oso-staff-sns-icons">
-                  <div class="siimple-grid-row">
-                    <div class="siimple-grid-col siimple-grid-col--3 oso-staff-sns-icon">
-                      <a href="https://twitter.com/mao_instantlife"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                    </div>
-                    <div class="siimple-grid-col siimple-grid-col--3 oso-staff-sns-icon">
-                      <a href="https://www.facebook.com/mao.instantlife"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                    </div>
-                    <div class="siimple-grid-col siimple-grid-col--3 oso-staff-sns-icon">
-                      <a href="https://github.com/Shinsuke-Abe"><i class="fab fa-github" aria-hidden="true"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="siimple-grid-col siimple-grid-col-sm--12 siimple-grid-col-md--6 siimple-grid-col-lg--4 siimple-grid-col--3">
-            <div class="siimple-box siimple-box--navy oso-staff-box">
-              <div class="oso-staff-image"><img src="images/staff/printing.png"></div>
-              <div class="oso-staff-name">吉田 圭佑</div>
-              <div class="oso-staff-roll">&nbsp;</div>
-              <div class="oso-staff-sns">
-                <div class="siimple-grid oso-staff-sns-icons">
-                  <div class="siimple-grid-row">
-                    <div class="siimple-grid-col siimple-grid-col--3 oso-staff-sns-icon">
-                      <a href="https://twitter.com/kasoku_ksk"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                    </div>
-                    <div class="siimple-grid-col siimple-grid-col--3 oso-staff-sns-icon">
-                      <a href="https://www.facebook.com/keicyanworld"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                    </div>
-                    <div class="siimple-grid-col siimple-grid-col--3 oso-staff-sns-icon">
-                      <a href="https://github.com/kasoku"><i class="fab fa-github" aria-hidden="true"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="siimple-grid-col siimple-grid-col-sm--12 siimple-grid-col-md--6 siimple-grid-col-lg--4 siimple-grid-col--3">
-            <div class="siimple-box siimple-box--navy oso-staff-box">
-              <div class="oso-staff-image"><img src="images/staff/printing.png"></div>
-              <div class="oso-staff-name">三輪 昭生</div>
-              <div class="oso-staff-roll">&nbsp;</div>
-              <div class="oso-staff-sns">
-                <div class="siimple-grid oso-staff-sns-icons">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="siimple-grid-col siimple-grid-col-sm--12 siimple-grid-col-md--6 siimple-grid-col-lg--4 siimple-grid-col--3">
-            <div class="siimple-box siimple-box--navy oso-staff-box">
-              <div class="oso-staff-image"><img src="images/staff/printing.png"></div>
-              <div class="oso-staff-name">山本 和久</div>
-              <div class="oso-staff-roll">&nbsp;</div>
-              <div class="oso-staff-sns">
-                <div class="siimple-grid oso-staff-sns-icons">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="siimple-grid-col siimple-grid-col-sm--12 siimple-grid-col-md--6 siimple-grid-col-lg--4 siimple-grid-col--3">
-            <div class="siimple-box siimple-box--navy oso-staff-box">
-              <div class="oso-staff-image"><img src="images/staff/printing.png"></div>
-              <div class="oso-staff-name">須増 亮</div>
-              <div class="oso-staff-roll">&nbsp;</div>
-              <div class="oso-staff-sns">
-                <div class="siimple-grid oso-staff-sns-icons">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="siimple-grid-col siimple-grid-col-sm--12 siimple-grid-col-md--6 siimple-grid-col-lg--4 siimple-grid-col--3">
-            <div class="siimple-box siimple-box--navy oso-staff-box">
-              <div class="oso-staff-image"><img src="images/staff/printing.png"></div>
-              <div class="oso-staff-name">早坂 竜二</div>
-              <div class="oso-staff-roll">&nbsp;</div>
-              <div class="oso-staff-sns">
-                <div class="siimple-grid oso-staff-sns-icons">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="siimple-grid-col siimple-grid-col-sm--12 siimple-grid-col-md--6 siimple-grid-col-lg--4 siimple-grid-col--3">
-            <div class="siimple-box siimple-box--navy oso-staff-box">
-              <div class="oso-staff-image"><img src="images/staff/printing.png"></div>
-              <div class="oso-staff-name">中本 賢吾</div>
-              <div class="oso-staff-roll">&nbsp;</div>
-              <div class="oso-staff-sns">
-                <div class="siimple-grid oso-staff-sns-icons">
-                  <div class="siimple-grid-row">
-                    <div class="siimple-grid-col siimple-grid-col--3 oso-staff-sns-icon">
-                      <a href="https://twitter.com/programjp"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                    </div>
-                    <div class="siimple-grid-col siimple-grid-col--3 oso-staff-sns-icon">
-                      <a href="https://facebook.com/kengo.nakamoto"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                    </div>
-                    <div class="siimple-grid-col siimple-grid-col--3 oso-staff-sns-icon">
-                      <a href="https://github.com/nakamoto"><i class="fab fa-github" aria-hidden="true"></i></a>
-                    </div>
-                    <div class="siimple-grid-col siimple-grid-col--3 oso-staff-sns-icon">
-                      <a href="http://asimatch.com"><i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                    <div class="siimple-grid-col siimple-grid-col--3 oso-staff-sns-icon" v-if="!!staff.external">
+                      <a v-bind:href="staff.external"><i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
                     </div>
                   </div>
                 </div>
@@ -234,5 +60,7 @@
       オープンセミナー岡山実行委員会
     </footer>
   </div>
+  <script src="script/header.js"></script>
+  <script src="script/staff.js"></script>
 </body>
 </html>

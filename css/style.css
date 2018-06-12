@@ -1,3 +1,33 @@
+@media screen and (max-width: 964px) {
+  .siimple-navbar .menus .siimple-navbar-link {
+    width: 100%;
+    background-color: #57607c;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .siimple-navbar .menus {
+    width: 100%;
+    padding-right: 20px;
+  }
+}
+@media screen and (min-width: 965px) {
+  .siimple-navbar .bars {
+    display: none;
+  }
+}
+
+/* enter、 leave アニメーションで異なる間隔やタイミング関数を利用することができます */
+.slide-fade-enter-active {
+  transition: all .3s linear;
+}
+.slide-fade-leave-active {
+  transition: all .8s linear;
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
 .top_social_buttons {margin: 20px; padding: 0px}
 .top_social_buttons li { display: inline; margin: 20px; }
 .top_social_buttons li i { width: 40px; height: 40px; line-height: 40px; border-style: none; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; background-color: #4894f0; color: #fff; margin: auto; font-size: 1.2em; transition: 0.5s;}
@@ -34,6 +64,7 @@
 }
 .oso-staff-name { font-size: 20px; }
 .oso-staff-name,.oso-staff-roll,.oso-staff-sns { padding-left: 10px; padding-right: 10px; padding-bottom: 5px; }
+.oso-staff-roll { height: 26px; }
 .oso-staff-sns-icons { text-align: center; margin-top: 10px; height: 45px; }
 .oso-staff-sns-icons .oso-staff-sns-icon { display: inline; text-align: center; }
 .oso-staff-sns-icons .oso-staff-sns-icon i { width: 32px; height: 32px; line-height: 32px; border: solid 1px; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; background-color: #4894f0; color: #fff; margin: auto; font-size: 1.0em; transition: 0.5s; }
