@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>オープンセミナー2018@岡山</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/siimple@3.0.0/dist/siimple.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div class="siimple-layout">
+    <!-- navbar -->
+    <header class="siimple-navbar siimple-navbar--navy siimple-navbar--large" id="header">
+      <div class="siimple-layout--left">
+        <a class="siimple-navbar-title" href="./">オープンセミナー2018@岡山</a>
+      </div>
+      <div class="siimple-layout--right">
+        <a class="siimple-navbar-link" v-bind:href="menu.url" v-for="(menu, index) in menus">{{menu.text}}</a>
+      </div>
+    </header>
+    <div class="siimple-content content">
+      <!-- theme -->
+      <div class="siimple-box page-title">
+        <div class="siimple-box-title"><i class="fas fa-question"></i> よくあるご質問</div>
+      </div>
+      <h2><i class="fas fa-question"></i> 最寄り駅はどこですか？</h2>
+      <p class="siimple-p">岡山駅になります。今年の会場はさん太ホールです。例年の会場と違いますのでご注意ください。<a class="siimple-link" href="about.html#venue">会場の情報はこちら</a></p>
+      <h2><i class="fas fa-question"></i> 会場での飲食は可能ですか？</h2>
+      <p class="siimple-p"><b>ホール内では飲食不可です。</b>建物自体での飲食は可能なので、休憩時間等を利用してホール外で飲食するなどの配慮をお願いします。</p>
+      <h2><i class="fas fa-question"></i> お昼にお弁当を注文できますか？</h2>
+      <p class="siimple-p">イベントとしては昼食はご用意しておりません。お近くの飲食店やコンビニ等をご利用ください。<br>なお、お一人で参加されている方を対象に、お昼を食べに行く方をランダムにマッチングさせるアンチボッチランチを開催予定です。ぜひご利用ください。</p>
+      <h2><i class="fas fa-question"></i> 車で行こうと思うのですが駐車場はありますか？</h2>
+      <p class="siimple-p">最寄りのコインパーキングをご利用ください。</p>
+      <h2><i class="fas fa-question"></i> 来年もやりますか？</h2>
+      <p class="siimple-p">やります。</p>
+    </div>
+    <!-- footer -->
+    <footer class="siimple-footer siimple-footer--navy" align="center">
+      オープンセミナー岡山実行委員会
+    </footer>
+  </div>
+  <script src="script/header.js"></script>
+</body>
+</html>
