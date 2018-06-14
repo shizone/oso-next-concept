@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/siimple@3.0.0/dist/siimple.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
@@ -14,16 +15,14 @@
     <!-- navbar -->
     <header class="siimple-navbar siimple-navbar--navy siimple-navbar--large" id="header">
       <div class="siimple-layout--left">
-        <a class="siimple-navbar-title" href="./">オープンセミナー2018@岡山</a>
+        <a class="siimple-navbar-title" href="./">OSO</a>
       </div>
       <div class="siimple-layout--right bars">
-        <a class="siimple-navbar-link" @click="showMenu = !showMenu"><i class="fas fa-bars"></i></a>
+        <a class="siimple-navbar-link" onclick="toggleCanvas();"><i class="fas fa-bars"></i></a>
       </div>
-      <transition name="slide-fade">
-        <div class="siimple-layout--right menus" v-if="showMenu">
-          <a class="siimple-navbar-link" v-bind:href="menu.url" v-for="(menu, index) in menus">{{menu.text}}</a>
-        </div>
-      </transition>
+      <div class="siimple-layout--right menus" id="menus">
+        <a class="siimple-navbar-link" v-bind:href="menu.url" v-for="(menu, index) in menus">{{menu.text}}</a>
+      </div>
     </header>
     <!-- jumbotron -->
     <div class="siimple-jumbotron siimple-jumbotron--navy siimple-jumbotron--large jumbotron">
