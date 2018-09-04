@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>オープンセミナー2018@岡山</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/siimple@3.0.0/dist/siimple.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div class="siimple-layout">
+    <!-- navbar -->
+    <header class="siimple-navbar siimple-navbar--navy siimple-navbar--large" id="header">
+      <div class="siimple-layout--left">
+        <a class="siimple-navbar-title" href="./">OSO</a>
+      </div>
+      <div class="siimple-layout--right bars">
+        <a class="siimple-navbar-link" onclick="toggleCanvas();"><i class="fas fa-bars"></i></a>
+      </div>
+      <div class="siimple-layout--right menus" id="menus">
+        <a class="siimple-navbar-link" v-bind:href="menu.url" v-for="(menu, index) in menus">{{menu.text}}</a>
+      </div>
+    </header>
+    <div class="siimple-content content">
+      <!-- staff -->
+      <div class="siimple-box page-title">
+        <div class="siimple-box-title"><i class="fas fa-history"></i> 過去の開催実績</div>
+      </div>
+      <div class="past" id="past">
+        <a :href="'../' + history.year + '/'"  v-for="(history, index) in histories">
+          <div class="siimple-box siimple-box--navy past_bg" :style="{'background-image': (history.image ? 'url(' + history.image + ')' : 'none')}">
+            <div class="siimple-box-title">{{history.year}}</div>
+            <div class="siimple-box-subtitle">{{history.theme}}&nbsp;</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- footer -->
+    <footer class="siimple-footer siimple-footer--navy" align="center">
+      オープンセミナー岡山実行委員会
+    </footer>
+  </div>
+  <script src="script/header.js"></script>
+  <script src="script/past.js"></script>
+</body>
+</html>

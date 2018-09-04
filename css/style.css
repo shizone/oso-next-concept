@@ -67,3 +67,20 @@
 .oso-staff-sns-icons .oso-staff-sns-icon { display: inline; text-align: center; }
 .oso-staff-sns-icons .oso-staff-sns-icon i { width: 32px; height: 32px; line-height: 32px; border: solid 1px; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; background-color: #4894f0; color: #fff; margin: auto; font-size: 1.0em; transition: 0.5s; }
 .oso-staff-sns-icons .oso-staff-sns-icon i:hover { border: solid 1px; color: #4894f0; background-color: #fff;}
+
+/* past */
+.past {
+  text-align: center;
+  text-shadow: 0 0 3px #444;
+}
+.past a {
+  text-decoration: none;
+}
+.past_bg {
+  background-position: 50% 50%;
+  z-index: 0;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
