@@ -69,18 +69,15 @@
 .oso-staff-sns-icons .oso-staff-sns-icon i:hover { border: solid 1px; color: #4894f0; background-color: #fff;}
 
 /* past */
-.past {
-  text-align: center;
-  text-shadow: 0 0 3px #444;
-}
-.past a {
-  text-decoration: none;
-}
-.past_bg {
-  background-position: 50% 50%;
-  z-index: 0;
-  background-size: cover;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 40px;
-}
+.past { text-align: center; text-shadow: 0 0 3px #444; }
+.past a { text-decoration: none; }
+.past_bg { background-position: 50% 50%; z-index: 0; background-size: cover; position: relative; overflow: hidden; margin-bottom: 40px; }
+
+/* sponsor */
+.sponsor { text-align: center; }
+.sponsor .siimple-grid-row { display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center; -webkit-align-items: stretch; align-items: stretch; }
+.sponsor .platina img {width: 300px; }
+.sponsor .gold img {width: 229px; }
+.sponsor .silver img {width: 200px; }
+.sponsor .bronze img {width: 150px; }
+.sponsor ul { list-style: none; }

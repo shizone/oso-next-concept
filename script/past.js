@@ -1,4 +1,4 @@
-var staff = new Vue({
+var past = new Vue({
   el: '#past',
   data: {
     histories: [
