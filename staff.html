@@ -7,64 +7,11 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/siimple@3.0.0/dist/siimple.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
   <div class="siimple-layout">
-    <!-- navbar -->
-    <header class="siimple-navbar siimple-navbar--navy siimple-navbar--large" id="header">
-      <div class="siimple-layout--left">
-        <a class="siimple-navbar-title" href="./">OSO</a>
-      </div>
-      <div class="siimple-layout--right bars">
-        <a class="siimple-navbar-link" onclick="toggleCanvas();"><i class="fas fa-bars"></i></a>
-      </div>
-      <div class="siimple-layout--right menus" id="menus">
-        <a class="siimple-navbar-link" v-bind:href="menu.url" v-for="(menu, index) in menus">{{menu.text}}</a>
-      </div>
-    </header>
-    <div class="siimple-content content">
-      <!-- staff -->
-      <div class="siimple-box page-title">
-        <div class="siimple-box-title"><i class="fas fa-users"></i> 実行委員会</div>
-      </div>
-      <div class="siimple-grid oso-staff" id="staff">
-        <div class="siimple-grid-row">
-          <div class="siimple-grid-col siimple-grid-col-sm--12 siimple-grid-col-md--6 siimple-grid-col-lg--4 siimple-grid-col--3" v-for="(staff, index) in staffs">
-            <div class="siimple-box siimple-box--navy oso-staff-box">
-              <div class="oso-staff-image"><img v-bind:src="'images/staff/' + staff.image"></div>
-              <div class="oso-staff-name">{{staff.name}}</div>
-              <div class="oso-staff-roll">{{staff.roll}}</div>
-              <div class="oso-staff-sns">
-                <div class="siimple-grid oso-staff-sns-icons">
-                  <div class="siimple-grid-row">
-                    <div class="siimple-grid-col siimple-grid-col--3 oso-staff-sns-icon" v-if="!!staff.twitter">
-                      <a v-bind:href="staff.twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                    </div>
-                    <div class="siimple-grid-col siimple-grid-col--3 oso-staff-sns-icon" v-if="!!staff.facebook">
-                      <a v-bind:href="staff.facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                    </div>
-                    <div class="siimple-grid-col siimple-grid-col--3 oso-staff-sns-icon" v-if="!!staff.github">
-                      <a v-bind:href="staff.github"><i class="fab fa-github" aria-hidden="true"></i></a>
-                    </div>
-                    <div class="siimple-grid-col siimple-grid-col--3 oso-staff-sns-icon" v-if="!!staff.external">
-                      <a v-bind:href="staff.external"><i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- footer -->
-    <footer class="siimple-footer siimple-footer--navy" align="center">
-      オープンセミナー岡山実行委員会
-    </footer>
+    <div id="staff"><staff/></div>
   </div>
-  <script src="script/header.js"></script>
   <script src="script/staff.js"></script>
 </body>
 </html>
