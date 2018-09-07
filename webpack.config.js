@@ -8,7 +8,8 @@ module.exports = {
     index: './src/js/index.js',
     past: './src/js/past.js',
     sponsor: './src/js/sponsor.js',
-    staff: './src/js/staff.js'
+    staff: './src/js/staff.js',
+    timetable: './src/js/timetable.js'
   },
   output: {
     path: path.join(__dirname, 'script/'),
@@ -23,11 +24,11 @@ module.exports = {
   module: {
     rules: [
       {
-        enforce: "pre",
+        enforce: 'pre',
         test: /\.(js|vue)$/,
         exclude: /node_modules/,
-        loader: "eslint-loader",
-      },      
+        loader: 'eslint-loader'
+      },
       {
         test: /\.vue$/,
         exclude: /node_modules/,
@@ -36,7 +37,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        exclude: /node_modules/,
+        exclude: /node_modules/
       },
       {
         test: /\.css$/,
@@ -51,17 +52,17 @@ module.exports = {
           loader: 'file-loader',
           options: {
             name: '[name].[ext]',
-            outputPath : '../images/'
+            outputPath: '../images/'
           }
         }]
-      },
+      }
     ]
   },
   devServer: {
     contentBase: './',
     port: 3000,
     host: 'localhost',
-    historyApiFallback: true,
+    historyApiFallback: true
   },
   plugins: [
     new VueLoaderPlugin()
