@@ -490,7 +490,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nod
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  menus: [{\n    text: 'タイムテーブル',\n    url: 'timetable.html'\n  }, {\n    text: 'よくあるご質問',\n    url: 'faq.html'\n  }, {\n    text: 'スポンサー',\n    url: 'sponsor.html'\n  }, {\n    text: '実行委員会',\n    url: 'staff.html'\n  }, {\n    text: '過去の開催実績',\n    url: 'past.html'\n  }]\n});\n\n//# sourceURL=webpack:///./src/js/data/header_data.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  menus: [{\n    text: 'よくあるご質問',\n    url: 'faq.html'\n  }, {\n    text: '実行委員会',\n    url: 'staff.html'\n  }, {\n    text: '過去の開催実績',\n    url: 'past.html'\n  }]\n});\n\n//# sourceURL=webpack:///./src/js/data/header_data.js?");
 
 /***/ }),
 
@@ -502,7 +502,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  histories: [{\n    year: 2017,\n    theme: 'レガシーと戦え',\n    image: '../2017/images/image_1.jpg'\n  }, {\n    year: 2016,\n    theme: 'スマホ祭り',\n    image: '../2016/images/image_1.jpg'\n  }, {\n    year: 2015,\n    theme: 'IT業界におけるセルフブランディング',\n    image: '../2015/images/main_1.jpg'\n  }, {\n    year: 2014,\n    theme: 'フロントエンドとサーバーサイド',\n    image: '../2014/images/main_1.jpg'\n  }, {\n    year: 2013\n  }, {\n    year: 2012\n  }, {\n    year: 2011\n  }, {\n    year: 2010\n  }, {\n    year: 2009\n  }, {\n    year: 2008\n  }]\n});\n\n//# sourceURL=webpack:///./src/js/data/past_data.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  histories: [{\n    year: 2018,\n    theme: 'エンジニアの生存戦略と働き方',\n    image: '../2018/images/image_1.jpg'\n  }, {\n    year: 2017,\n    theme: 'レガシーと戦え',\n    image: '../2017/images/image_1.jpg'\n  }, {\n    year: 2016,\n    theme: 'スマホ祭り',\n    image: '../2016/images/image_1.jpg'\n  }, {\n    year: 2015,\n    theme: 'IT業界におけるセルフブランディング',\n    image: '../2015/images/main_1.jpg'\n  }, {\n    year: 2014,\n    theme: 'フロントエンドとサーバーサイド',\n    image: '../2014/images/main_1.jpg'\n  }, {\n    year: 2013\n  }, {\n    year: 2012\n  }, {\n    year: 2011\n  }, {\n    year: 2010\n  }, {\n    year: 2009\n  }, {\n    year: 2008\n  }]\n});\n\n//# sourceURL=webpack:///./src/js/data/past_data.js?");
 
 /***/ }),
 

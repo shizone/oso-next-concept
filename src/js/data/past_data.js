@@ -1,6 +1,11 @@
 export default {
   histories: [
     {
+      year: 2018,
+      theme: 'エンジニアの生存戦略と働き方',
+      image: '../2018/images/image_1.jpg'
+    },
+    {
       year: 2017,
       theme: 'レガシーと戦え',
       image: '../2017/images/image_1.jpg'

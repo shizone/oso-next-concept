@@ -3,9 +3,9 @@
     <app-header/>
     <!-- jumbotron -->
     <div class="siimple-jumbotron siimple-jumbotron--navy siimple-jumbotron--large jumbotron">
-      <div class="siimple-jumbotron-title">オープンセミナー2018@岡山</div>
-      <div class="siimple-jumbotron-subtitle">エンジニアの生存戦略と働き方</div>
-      <div class="siimple-jumbotron-detail"><i class="far fa-calendar-alt"/> 2018年5月12日(土)開催</div>
+      <div class="siimple-jumbotron-title">オープンセミナー2019@岡山</div>
+      <div class="siimple-jumbotron-subtitle">Technology X Society</div>
+      <div class="siimple-jumbotron-detail"><i class="far fa-calendar-alt"/> 2019年6月29日(土)開催</div>
       <div class="siimple-jumbotron-detail">
         <ul class="top_social_buttons">
           <li>
@@ -31,23 +31,25 @@
           </li>
         </ul>
       </div>
-      <div class="siimple-jumbotron-detail"><div class="siimple-btn siimple-btn--blue">お申込みはこちらから</div></div>
+      <div class="siimple-jumbotron-detail"><div class="siimple-btn siimple-btn--blue">お申込み開始まで今しばらくお待ちください</div></div>
     </div>
     <div class="siimple-content content">
       <!-- theme -->
       <h2 id="theme">テーマ</h2>
-      <p>「エンジニアの生存戦略と働き方」</p>
+      <p>「Technology X Society」</p>
       <p>
-        一口にエンジニアとは言っても、そこには様々なキャリアや働き方があります。<br>
-        エンジニアを一生の仕事としていくためには、どういったキャリアをめざせばいいのか？<br>
-        仕事とプライベートを、楽しく充実したものにするには？<br>
-        またエンジニアから別の職種へ変わるとどうなのか？
+        現在テクノロジーは、社会の様々な局面をその基盤として支えています。それはすなわち、エンジニアはそのスキルを持って社会と関わり、あり方を変えていく大きな可能性を持っているということです。
       </p>
       <p>
-        今回のイベントでは、エンジニアとして個性的なキャリアを歩んでこられた方たちのお話をお届けします。
+        例えば、テクノロジーで社会問題に取り組んだり。<br>
+        例えば、世界を変えるアイデアをテクノロジーで実現させたり。
+      </p>
+      <p>
+        今年のオープンセミナー岡山では、テクノロジーで社会と関わりにおいてユニークな発想や使命をお持ちの方たちのお話をお届けします。
       </p>
       <p>
         エンジニアとして働くあなたの、未来のヒントを探しましょう。
+        今回のイベントでは、エンジニアとして個性的なキャリアを歩んでこられた方たちのお話をお届けします。
       </p>
       <!-- oso -->
       <h2 id="about-oso">オープンセミナーとは</h2>
@@ -76,7 +78,7 @@
       <!-- venue -->
       <h2 id="venue">日時・場所</h2>
       <p>
-        2018年5月12日（土） 10:00 - 18:30
+        2018年6月29日（土） 10:00 - 18:30
         <a
           class="siimple-link"
           href="http://www.sj-smile.com/hall/hall01.html">
