@@ -84,7 +84,7 @@ export default {
     {
       name: '吉田 圭佑',
       roll: '',
-      image: 'printing.png',
+      image: 'kyoshida.jpg',
       twitter: 'https://twitter.com/kasoku_ksk',
       facebook: 'https://www.facebook.com/keicyanworld',
       github: 'https://github.com/kasoku',
