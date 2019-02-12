@@ -3,7 +3,7 @@ export default {
     {
       name: '阿部 信介',
       roll: '実行委員長',
-      image: 'printing.png',
+      image: 'abe.jpg',
       twitter: 'https://twitter.com/mao_instantlife',
       facebook: 'https://www.facebook.com/mao.instantlife',
       github: 'https://github.com/Shinsuke-Abe',
@@ -21,9 +21,9 @@ export default {
     {
       name: '芝 世弐',
       roll: '事務局長',
-      image: 'printing.png',
-      twitter: '',
-      facebook: '',
+      image: 'shiba.jpg',
+      twitter: 'https://twitter.com/bleu48',
+      facebook: 'https://www.facebook.com/bleu48',
       github: '',
       external: ''
     },
@@ -75,8 +75,8 @@ export default {
     {
       name: '三輪 昭生',
       roll: '',
-      image: 'printing.png',
-      twitter: '',
+      image: 'miwa.png',
+      twitter: 'https://twitter.com/triring',
       facebook: '',
       github: '',
       external: ''
@@ -93,11 +93,11 @@ export default {
     {
       name: '吉田 貴文',
       roll: '',
-      image: 'printing.png',
+      image: 'tyoshida.jpg',
       twitter: 'https://twitter.com/zephiransas',
       facebook: 'https://www.facebook.com/takafumi.yoshida.718',
-      github: '',
-      external: 'https://zephiransas.github.io'
+      github: 'https://github.com/zephiransas',
+      external: ''
     }
   ]
 }
