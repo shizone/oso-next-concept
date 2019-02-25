@@ -69,7 +69,7 @@ export default {
       image: 'hirooka.jpg',
       twitter: 'https://twitter.com/LeGenD_BeaT',
       facebook: 'https://www.facebook.com/kenntarou.hirooka',
-      github: '',
+      github: 'https://github.com/HiroKen-LB',
       external: ''
     },
     {
