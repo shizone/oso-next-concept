@@ -4,7 +4,9 @@ jobs:
     working_directory: ~/workspace
     docker:
       - image: circleci/node:11
-
+    branches:
+      only:
+        - master
     steps:
       - checkout
       - restore_cache:
