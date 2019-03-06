@@ -21,3 +21,12 @@ jobs:
           paths:
             - node_modules
           key: projectname-{{ .Branch }}-{{ checksum "package.json" }}
+
+      - run:
+          name: Deploy
+          commands:
+            - git config --global user.email shizonera@gmail.com
+            - git config --global user.name razon
+            - git add .
+            - git commit -m "[ci skip] Deploy by CI"
+            - git push -f git@github.com:shizone/oso-next-concept.git gh-pages
