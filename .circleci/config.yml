@@ -27,4 +27,4 @@ jobs:
             git config --global user.name razon
             git add .
             git commit -m "[ci skip] Deploy by CI"
-            git push -f git@github.com:shizone/oso-next-concept.git gh-pages
+            git push -f git@github.com:shizone/oso-next-concept.git master:gh-pages
