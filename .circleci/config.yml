@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/workspace
     docker:
-      - image: circleci/frontend
+      - image: circleci/node:11
 
     steps:
       - checkout
