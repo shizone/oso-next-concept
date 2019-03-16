@@ -13,6 +13,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, 'script/'),
+    publicPath: '/script',
     filename: '[name].js'
   },
   resolve: {
