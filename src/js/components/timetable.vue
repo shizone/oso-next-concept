@@ -239,4 +239,8 @@ export default {
 }
 </script>
 <style scoped>
+  td.siimple-table-cell {
+    overflow-wrap: break-word;
+    white-space: normal;
+  }
 </style>
